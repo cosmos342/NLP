@@ -14,6 +14,7 @@
 
 # NEXTCHAR.py (MANY TO 1 NLP sequence prediction)
 * This program predicts next character in a sequence of 8 characters(many to 1 sequence example)based on a sequence text of 600K characters.
+* The model can be trained with option of different modeltypes(simple,conv,convlstm,rnn) etc. Check the code.
 * From the given text samples are created of length 8 characters and label (next character) is created for each sample
 * Different models in increasing complexity are created to improve accuracy and the training log is as follows.
   * Simple FC model got 2.3 loss accuracy: 34%
@@ -35,5 +36,7 @@
  * Fixed the embedding layer to have length vocab_size of 85. Trained to 93%
     accuracy with 8 epochs
  * Also tried stateful model. In stateful model for next batch the previous LSTM hidden state is used, otherwise it is ignored.
-   Also in stateful model you need to have the number of training inputs a clean multiple of the batch size used(cannot be fraction). In embedding layer batch size should be used. In the LSTM layer stateful parameter should be set to true. Trained to around the same accuracy as non stateful model
+   Also in stateful model you need to have the number of training inputs a clean multiple of the batch size used(cannot be fraction). In embedding layer batch size must be specified. In the LSTM layer stateful parameter should be set to true. Trained to around the same accuracy(over 90%) as for the non stateful model
+ * In this program there is option to load or train model afresh(after each traning model is stored). Also number of epochs to train can be specified.
+   
 
