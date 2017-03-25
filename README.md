@@ -16,14 +16,15 @@
 * This program predicts next character in a sequence of 8 characters based on a sequence text of 600K characters.
 * From the given text samples are created of length 8 characters and label (next character) is created for each sample
 * Different models in increasing complexity are created to improve accuracy and the training log is as follows.
-* simple one layer without batch norm 80%
-1.with Simple FC model got 2.3 loss acc?
-2. with ConvModel got 1.97 loss acc: 0.4250 (starts with accuracy of 0.11)
-3. with 100 LSTM got 1.89 loss acc: 0.4424 (betterthan conv1d) ran slow
-4. with 100 SimpleRNN units got 2.11 loss and accuracy of 0.3989 ran faster
-5. with 100 GRU  1.94 loss and 0.4320 accuracy
-6. with Conv1D and LSTM 3 epochs. Loss:1.75 and acc:0.4716
-7. with Conv1D(2) and LSTM  1 epoch: 1.97 and acc: 0.42
-8. with Conv1D(2) and LSTM 12 epoch on 8 sequence to next sequence
+  * Simple FC model got 2.3 loss accuracy: 34%
+  * ConvModel got 1.97 loss acc: 0.4250 (starts with accuracy of 0.11)
+  * 100 LSTM got 1.89 loss acc: 0.4424 (betterthan conv1d) ran slow
+  * with 100 SimpleRNN units got 2.11 loss and accuracy of 0.3989 ran faster
+  * with 100 GRU  1.94 loss and 0.4320 accuracy
+  * with Conv1D and LSTM 3 epochs. Loss:1.75 and acc:0.4716
+  * with Conv1D(2) and LSTM  1 epoch: 1.97 and acc: 0.42
+  * with Conv1D(2) and LSTM 12 epoch on 8 sequence to next sequence
    determination, got loss of 1.6 and accuracy of :0.52
+ * Here the accuracy seem to lower, best got 52 accuracy with Conv+LSTM model. Reason is more training is needed
+ * Also sample size may be small.
 
