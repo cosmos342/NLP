@@ -27,4 +27,6 @@
    determination, got loss of 1.6 and accuracy of :0.52
  * Here the accuracy seem to lower, best got 52 accuracy with Conv+LSTM model. Reason is more training is needed
  * Also sample size may be small.
+ 
+ # NEXTCHARS.py
 
