@@ -32,7 +32,7 @@ after each training the model is saved so in future it can be loaded and further
  * Also sample size may be small.
  
  # NEXTCHARS.py (MANY to MANY NLP sequence prediction)
- * This program predicts for every character predicts next character. So the network is trained with 8 character sequence to predict next 8 character sequence.
+ * This program predicts next character for every input character. So the network is trained with 8 character sequence to predict next 8 character sequence.
  * Used ConvLSTM network. Important is that in keras, in LSTM network need to specify return sequences to true, so that for each character in the sequence LSTM generates one output.
  * Also important to Create for the output classification layer, TimeDistributed Layer so that network generates 8 different output softmax classifications.
  * Fixed the embedding layer to have length vocab_size of 85. Trained to 93%
