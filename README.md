@@ -12,8 +12,8 @@
   accuracy went upto 86% after 4 epochs. when i added l2 regularizer it started of with 50% accuracy in 2 iterations. didn't try more
 * Tried three Convolution1D parallel layers and concatedated with keras functional API and then added LSTM layer on top. Improved accuracy to got 87% accuracy in 2 epochs
 
-# NEXTCHAR.py
-* This program predicts next character in a sequence of 8 characters based on a sequence text of 600K characters.
+# NEXTCHAR.py (MANY TO 1 NLP sequence prediction)
+* This program predicts next character in a sequence of 8 characters(many to 1 sequence example)based on a sequence text of 600K characters.
 * From the given text samples are created of length 8 characters and label (next character) is created for each sample
 * Different models in increasing complexity are created to improve accuracy and the training log is as follows.
   * Simple FC model got 2.3 loss accuracy: 34%
@@ -28,5 +28,12 @@
  * Here the accuracy seem to lower, best got 52 accuracy with Conv+LSTM model. Reason is more training is needed
  * Also sample size may be small.
  
- # NEXTCHARS.py
+ # NEXTCHARS.py (MANY to MANY NLP sequence prediction)
+ * This program predicts for every character predicts next character. So the network is trained with 8 character sequence to predict next 8 character sequence.
+ * Used ConvLSTM network. Important is that in keras, in LSTM network need to specify return sequences to true, so that for each character in the sequence LSTM generates one output.
+ * Also important to Create for the output classification layer, TimeDistributed Layer so that network generates 8 different output softmax classifications.
+ * Fixed the embedding layer to have length vocab_size of 85. Trained to 93%
+    accuracy with 8 epochs
+ * Also tried stateful model. In stateful model for next batch the previous LSTM hidden state is used, otherwise it is ignored.
+   Also in stateful model you need to have the number of training inputs a clean multiple of the batch size used(cannot be fraction). In embedding layer batch size should be used. In the LSTM layer stateful parameter should be set to true. Trained to around the same accuracy as non stateful model
 
