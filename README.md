@@ -2,6 +2,8 @@
 # SENTIMENT.py
 * This program pics up files from imdb reviews and provides sentiment weather the sentence is positive or negative.
 * While traing tried from simple to more advanced models to improve accuracy.
+* In this program option is there to specify different type of models to create and train(simple,lstm,conv) etc. Also 
+after each training the model is saved so for futre it can be loaded and further trained with load option. Pl check the code.
 * Reduced the sequence length to 500 words(chose top 5000 high frequency words) and padded shorter sequeunces with zeros.
 * Replaced words with frequency lesser than 5000.
 * Tried on one-layer SIMPLE network without batchnormlization and got 80% accuracy
@@ -14,7 +16,7 @@
 
 # NEXTCHAR.py (MANY TO 1 NLP sequence prediction)
 * This program predicts next character in a sequence of 8 characters(many to 1 sequence example)based on a sequence text of 600K characters.
-* The model can be trained with option of different modeltypes(simple,conv,convlstm,rnn) etc. Check the code.
+* The model can be trained with option of different modeltypes(simple,conv,convlstm,rnn) etc. Please check the code.
 * From the given text samples are created of length 8 characters and label (next character) is created for each sample
 * Different models in increasing complexity are created to improve accuracy and the training log is as follows.
   * Simple FC model got 2.3 loss accuracy: 34%
@@ -37,6 +39,6 @@
     accuracy with 8 epochs
  * Also tried stateful model. In stateful model for next batch the previous LSTM hidden state is used, otherwise it is ignored.
    Also in stateful model you need to have the number of training inputs a clean multiple of the batch size used(cannot be fraction). In embedding layer batch size must be specified. In the LSTM layer stateful parameter should be set to true. Trained to around the same accuracy(over 90%) as for the non stateful model
- * In this program there is option to load or train model afresh(after each traning model is stored). Also number of epochs to train can be specified.
+
    
 
