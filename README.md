@@ -5,7 +5,7 @@
 * In this program option is there to specify different type of models to create and train(simple,lstm,conv) etc. Also 
 after each training the model is saved so in future it can be loaded and further trained with load option. Pl check the code.
 * Reduced the sequence length to 500 words(chose top 5000 high frequency words) and padded shorter sequeunces with zeros.
-* Replaced words with frequency lesser than 5000.
+* Replaced words with frequency lesser than 5000 with a value of 5000(higher frequency words have values from 0 to 4999)
 * Tried on one-layer SIMPLE network without batchnormlization and got 80% accuracy
 * Added batch norm layer and improved accuracy to  83%
 * Added dropout inaddition to batchnorm layer and improved accuracy to 85%
