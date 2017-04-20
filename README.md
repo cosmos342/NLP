@@ -2,7 +2,7 @@
 # SENTIMENT.py
 * This program pics up files from imdb reviews and provides sentiment weather the sentence is positive or negative.
 * While training tried from simple to more advanced models to improve accuracy.
-* In this program option is there to specify different type of models to create and train(simple,lstm,conv) etc. Also 
+* In this program there is option to specify different type of models to create and train(simple,lstm,conv) etc. Also 
 after each training the model is saved so in future it can be loaded and further trained with load option. Pl check the code.
 * Reduced the sequence length to 500 words(chose top 5000 high frequency words) and padded shorter sequeunces with zeros.
 * Replaced words with frequency lesser than 5000 with a value of 5000(higher frequency words have values from 0 to 4999)
