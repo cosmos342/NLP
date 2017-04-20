@@ -9,7 +9,7 @@ after each training the model is saved so in future it can be loaded and further
 * Tried one-layer SIMPLE network without batchnormlization and got 80% accuracy
 * Added batchnormalization layer and improved accuracy to  83%
 * Added dropout inaddition to batchnorm layer and improved accuracy to 85%
-* Tried Convolution1D layer + batchnorm + maxpooling + dropout improved the result to 87% but not stablein 2 epochs.
+* Tried Convolution1D layer + batchnorm + maxpooling + dropout improved the result to 87% but not stable in 2 epochs.
 * Tried LSTM layer. Training was more slower than other networks (slower than Simple,Convolution networks previously tried)
   accuracy went upto 86% after 4 epochs. when i added l2 regularizer it started of with 50% accuracy in 2 iterations. didn't try more
 * Tried three Convolution1D parallel layers and concatenated with keras functional API and then added LSTM layer on top. Improved accuracy to got 87% accuracy in 2 epochs
