@@ -2,7 +2,7 @@
 # NLP
 # SENTIMENT.py
 * this project is a playground, where i am just trying out things
-* This program pics up files from imdb reviews and provides sentiment weather the sentence is positive or negative.
+* This program pics up files from imdb reviews and provides sentiment whether the sentence is positive or negative.
 * While training, tried from simple to more advanced models to improve accuracy.
 * In this program there is option to specify different type of models to create and train(simple,lstm,conv) etc. Also 
 after each training the model is saved so in future it can be loaded and further trained.
